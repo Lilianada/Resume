@@ -513,14 +513,17 @@ footer h3{
         line-height: 30px;
     }
 
-/* Hero */
+    /* Hero */
+    .hero_wrapper{
+        flex-direction: column;
+    }
     .hero_wrapper img{
       width: 300px;
       height: 300px;
     }
 
     .hero-texts{
-        width: 400px;
+        width: 300px;
     }
 
     .big-button{
