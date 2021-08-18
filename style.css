@@ -25,7 +25,7 @@ body{
     max-width: 100vw;
     height: 100vh;
     font-family: Rasa;
-    font-size: 16px;
+    font-size: 18px;
     background-color: var(--color-text-1);
 }
 
@@ -57,7 +57,6 @@ h2{
     line-height: 44px;
     display: flex;
     align-items: center;
-    text-align: center;
     letter-spacing: -0.015em;
 }
 
@@ -82,38 +81,49 @@ header{
     height: 90px;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 2em 0;
-
     border-bottom: black 1px solid;
 }
 
 .logo-text p{
     font-family:'Satisfy', cursive;
-    padding: 2em;
+    font-size: 24px;
+    width: 150px;
+    height: 40px;
+    padding: 10px;
 }
 
 nav ul{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 ul li{
     list-style: none;
-    padding: 2em;
     cursor: pointer;
+    
+    width: 85px;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px black solid;
+    border-radius: 4px;
 }
 
-li a:hover{
-    border: 2px --green solid;
+ul li:hover{
+    background-color: var(--color-text-3);
+    transition: ease-in-out .5s;
 }
 
-li:active{
-    border: 2px --green solid;
+ul li:active{
+    border: 1px var(--color-text-2) solid;
 }
+/* Header Ends */
 
 /* Hero Starts */
-.hero-wrapper{
+.hero_wrapper{
     width: 100%;
 
     display: flex;
@@ -156,7 +166,7 @@ li:active{
     border: 1px black solid;
     border-radius: 4px;
 
-    font-family: var('Rasa', serif);
+    font-family: Rasa;
     font-size: 18px;
     background-color: none;
 
@@ -165,8 +175,9 @@ li:active{
 }
 
 .big-button:hover {
-    border-color: var(--color-text-2);
-  }
+    background-color: var(--color-text-3);
+    transition: ease-in-out .5s;
+}
 
 .two{
     margin-left: 2em;
@@ -181,6 +192,103 @@ img{
 }
 
 /* Hero Ends */
+
+/* About starts */
+
+.about{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    padding: 2em;
+    background-color: var(--color-text-2);
+}
+
+.about img{
+    width: 400px;
+    height: 400px;
+}
+
+.about-text {
+    width: 500px;
+    height: 450px;
+    padding: 1em;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.about-text p{
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    letter-spacing: 0.01em;
+    line-height: 30px;
+    padding-top: 2em;
+}
+
+/* About Ends */
+
+/* Skills Start */
+
+.skills{
+    width: 100%;
+    padding: 2em;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+/* .skills-box{
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 0 auto;
+    padding: 2em;
+} */
+
+.skills__item {
+    margin-top: 3px;  
+}
+
+.left ,
+.right {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.left {
+    width: 60%;    
+}
+
+.right {
+    text-align: right;
+    width: 39%;    
+}
+
+
+.skills__item .right input {
+    display: none;
+}
+
+.checked-label {
+    display: inline-block;  
+    width: 20px;
+    height: 20px;
+    background: var(--color-text-2);
+    border-radius: 20px;
+    margin-right: 3px;
+    margin-top: 3px;
+}
+
+input:checked + label {
+    background: var(--color-text-3);
+}
+
+/* Skills end */
 
 /* Services Start */
 
@@ -215,6 +323,7 @@ img{
 .service-items p{
     text-align: center;
     line-height: 36px;
+    padding: 2em;
 }
 
 .mid-button{
@@ -230,10 +339,11 @@ img{
 }
 
 .mid-button:hover{
-   /* background-color: var(--color-text-3); */
-   border: 1px solid var(--color-text-3);
+   background-color: var(--color-text-3);
+   transition: ease-in-out .5s;
 }
 /* Service End */
+
 
 /* Projects Start */
 
@@ -253,21 +363,168 @@ img{
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
 }
 
 .project-items{
-    width: 300px;
+    width: 500px;
     height: 593;
+    padding: 2em;
+
+    text-align: justify;
+    margin: 0 auto;
+}
+
+.project-items img{
+    width: 400px;
+    height: 262px;
+    
+    background-size: cover;
+    background-position: center;
+}
+
+.project-texts{
+    width: 500px;
+    height: 300px;
+    line-height: 30px;
 }
 
 /* Projects Ends */
+
+
+
 /* Contact Begins */
 .contacts{
     width: 100%;
+    padding: 2em;
     
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color: var(--color-text-2);
+}
 
+.contact-box{
+    width: 500px;
+    height: 450px;
+    line-height: 36px;
+
+    padding: 2em;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.fcf-label{
+    font-family: Rasa;
+    font-size: 18px;
+    
+}
+
+input{
+    width: 300px;
+    height: 35px;
+    padding: 10px;
+
+    font-style: Rasa;
+    font-size: 18px;
+
+    background-color: var(--color-text-1);
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+textarea{
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+
+    font-family: Rasa;
+    font-size: 18px;
+
+    background-color: var(--color-text-1);
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.fcf-btn{
+    width: 110px;
+    height: 30px;
+
+    font-family: Rasa;
+    font-size: 16px;
+    cursor: pointer;
+
+    background-color: var(--color-text-1);
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.fcf-btn:hover{
+    background-color: var(--color-text-3);
+    transition: ease-in-out .5s;
+}
+
+/* Footer starts */
+footer{
+    /* margin: 2em; */
+    padding: 1em 0;
+    border-top: 1px solid black;
+}
+
+footer h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact-icons p .fa{
+    color: black;
+    text-decoration: none;
+    padding: 1em 2em;
+}
+
+.contact-icons p .fa:hover{
+    color: var(--color-text-3);
+    transition: ease-in-out .5s;
+}
+
+
+@media screen and (max-width: 900px) {
+
+    body{
+        font-size: 16px;
+    }
+    h1{
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    h2{
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    h3{
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+/* Hero */
+    .hero_wrapper img{
+      width: 300px;
+      height: 300px;
+    }
+
+    .hero-texts{
+        width: 400px;
+    }
+
+    .big-button{
+        width: 140px;
+        height: 40px;
+    }
 }
