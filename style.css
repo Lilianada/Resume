@@ -79,7 +79,8 @@ span{
 header{
     width: 100%;
     height: 90px;
-
+    font-family:'Overlock', sans-serif;
+    font-size: 24px;
     display: flex;
     justify-content: space-around;
     padding: 2em 0;
@@ -87,8 +88,7 @@ header{
 }
 
 .logo-text p{
-    font-family:'Satisfy', cursive;
-    font-size: 24px;
+    
     width: 150px;
     height: 40px;
     padding: 10px;
@@ -107,15 +107,8 @@ ul .navlink{
     height: 40px;
     padding: 10px;
     text-align: center;
-    box-sizing: border-box;
-    border: 1px black solid;
-    border-radius: 4px;
 }
 
-ul .navlink:hover{
-    background-color: var(--color-text-3);
-    transition: ease-in-out .5s;
-}
 
 /* Header Ends */
 
@@ -233,19 +226,11 @@ img{
 .skills{
     width: 100%;
     padding: 2em;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    align-items: center; */
+    align-items: center;
 }
 
-/* .skills-box{
-    width: 500px;
-    height: 200px;
-    border: 1px solid black;
-    border-radius: 4px;
-    margin: 0 auto;
-    padding: 2em;
-} */
 
 .skills__item {
     margin-top: 3px;  
@@ -258,12 +243,12 @@ img{
 }
 
 .left {
-    width: 60%;    
+    width: 400px;    
 }
 
 .right {
     text-align: right;
-    width: 39%;    
+    width: 500px;    
 }
 
 
@@ -285,7 +270,51 @@ input:checked + label {
     background: var(--color-text-3);
 }
 
+.technical-skills,
+.soft-skills{
+    padding: 1em 0;
+}
+
 /* Skills end */
+
+/*  Qualification starts  */
+
+.qualification{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2em 0;
+    line-height: 24px;
+}
+
+
+.qual{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 2em;
+}
+
+.qual-one{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+
+
+.left-qual{
+    width: 400px;
+}
+
+.right-qual{
+    width: 500px;
+}
+
+/* qualification end */
 
 /* Services Start */
 
@@ -328,15 +357,6 @@ input:checked + label {
     padding: 1em;
 }
 
-.qualification{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.qual{
-    width: 500px;
-}
 
 
 /* Service End */
@@ -489,7 +509,7 @@ footer h3{
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 767px) {
 
     body{
         font-size: 16px;
@@ -547,24 +567,18 @@ footer h3{
 
     .about-text{
         width: 300px;
-        height: 600px;
-
+        height: 620px;
+       
     }
 
     /* Skills */
 
-    .skills{
-       width: 350px;
-       margin: 0 auto;
-    }
-
     .left {
-        width: 45%;    
+        width: 100px;    
     }
     
     .right {
-        /* text-align: right; */
-        width: 40%;    
+        width: 200px;    
     }    
 
     .checked-label{
@@ -581,11 +595,26 @@ footer h3{
     }
 
     
-.qualification{
-    flex-direction: column;
-}
-    .qual {
-        width: 300px;
+    .qualification{
+        flex-direction: column;
+        text-align: justify;
+    }
+
+    .qualification h3{
+        text-align: center;
+        padding: 1em;
+    }
+
+    .qual-one{
+        height: 200px;
+    }
+
+    .left-qual{
+        width: 200px;
+    }
+
+    .right-qual{
+        width: 200px;
     }
 
     /* Project */
@@ -650,4 +679,59 @@ footer h3{
         padding: 10px;
     }
     
+}
+
+@media screen and (min-width:768px) {
+    header{
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hero_wrapper{
+        flex-direction: column-reverse;
+    }
+
+    .about{
+        flex-direction: column;
+    }
+
+    .about-text{
+        height: 480px;
+    }
+
+    .left{
+        width: 300px;
+    }
+
+    .right{
+        width: 300px;
+    }
+
+    .services-list{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .contacts{
+        flex-direction: column;
+    }
+
+    .contacts h2{
+        padding: 1em;
+    }
+
+    footer h3{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-items{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact-items p{
+        padding: 10px;
+    }
 }
