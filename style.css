@@ -580,6 +580,14 @@ footer h3{
         align-items: center; 
     }
 
+    
+.qualification{
+    flex-direction: column;
+}
+    .qual {
+        width: 300px;
+    }
+
     /* Project */
     .project-lists{
         flex-direction: column;
