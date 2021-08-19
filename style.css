@@ -545,8 +545,12 @@ and (max-width: 767px) {
         align-items: center;
     }
 
+    nav ul{
+        justify-content: space-evenly;
+    }
+
     ul .navlink {
-        margin-left: 10px;
+        margin-left: 0;
     }
     
     li a img{
