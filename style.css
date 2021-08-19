@@ -545,6 +545,14 @@ and (max-width: 767px) {
         align-items: center;
     }
 
+    ul .navlink {
+        margin-left: 10px;
+    }
+    
+    li a img{
+        width: 70px;
+    }
+
     /* Hero */
     .hero_wrapper{
         flex-direction: column-reverse;
