@@ -645,6 +645,10 @@ and (max-width: 767px) {
         justify-content: center;
         align-items: center;
     }
+
+    .contacts h2{
+        padding: 1em;
+    }
     
     .contact-box{
         width: 300px;
